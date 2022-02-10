@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ListGroup, Button, ListGroupItem } from 'react-bootstrap';
 import { useRealmApp } from '../RealmApp';
 import styled from '@emotion/styled';
-export default function DataCard({ headline, field1, field2, field3, field4, data1, data2, data3, data4, imgSrc, del }) {
+export default function DataCard({ headline, field1, field2, field3, field4, data1, data2, data3, data4, imgSrc, func }) {
 	const app = useRealmApp();
 	const { addData, deleteStat } = app?.currentUser?.functions;
 	const [disp, setDisp] = useState('block');
@@ -35,7 +35,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 					{field4}: {data4}
 				</Item>
 			)}
-			{!del && (
+			{func == 'save' && (
 				<Item>
 					<Button
 						onClick={async () => {
@@ -53,7 +53,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 					</Button>{' '}
 				</Item>
 			)}
-			{del && (
+			{func == 'delete' && (
 				<Item>
 					<Button
 						onClick={async () => {

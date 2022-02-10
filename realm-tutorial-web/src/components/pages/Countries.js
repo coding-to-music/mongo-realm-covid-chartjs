@@ -72,6 +72,7 @@ function Countries() {
 							data2={totalDeaths === '' ? countries?.results[0]?.deaths : totalDeaths}
 							data3={totalRecovered === '' ? countries?.results[0]?.recovered : totalRecovered}
 							imgSrc={imgSrc === '' ? countries?.results[0]?.countryInfo?.flag : imgSrc}
+							func="save"
 						/>
 					</Col>
 					<Col>

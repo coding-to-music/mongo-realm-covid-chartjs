@@ -61,6 +61,7 @@ function Continents() {
 						data4={todayCases === '' ? continents?.results[0]?.todayCases : todayCases}
 						data2={totalDeaths === '' ? continents?.results[0]?.deaths : totalDeaths}
 						data3={totalRecovered === '' ? continents?.results[0]?.recovered : totalRecovered}
+						func="save"
 					/>
 				</Col>
 				<Col>

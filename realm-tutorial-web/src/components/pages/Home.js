@@ -29,6 +29,7 @@ function Home() {
 						data1={all.results.cases}
 						data2={all.results.deaths}
 						data3={all.results.recovered}
+						func="save"
 					/>
 				</Col>
 			</Row>

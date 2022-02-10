@@ -34,7 +34,7 @@ function Navigation() {
 					</Nav>
 				</Navbar.Collapse>
 				<Nav>
-					<LinkContainer to="/continents">
+					<LinkContainer to="/saved">
 						<Nav.Link>Saved Data</Nav.Link>
 					</LinkContainer>
 					<Sidebar currentProject={currentProject} setCurrentProject={setCurrentProject}></Sidebar>

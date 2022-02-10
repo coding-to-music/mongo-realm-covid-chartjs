@@ -37,7 +37,7 @@ function Admin() {
 			<Row style={{ display: 'grid', gridTemplateColumns: '18rem 18rem 18rem ', gridGap: '10%', marginTop: '30px' }}>
 				{documents[value].memberOf.map((d, i) => {
 					return (
-						<Col>
+						<Col key={i}>
 							<DataCard
 								key={i}
 								headline={d._partition}
@@ -47,7 +47,7 @@ function Admin() {
 								data1={d.cases}
 								data2={d.deaths}
 								data3={d.recovered}
-								del={'delete'}
+								func="delete"
 							/>
 						</Col>
 					);
