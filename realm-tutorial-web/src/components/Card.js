@@ -1,13 +1,19 @@
 import React from 'react';
+import LGCard from '@leafygreen-ui/card';
 import styled from '@emotion/styled';
 
-const SelectBox = styled.select`
-	margin: 40px;
-	background: rgba(0, 0, 0, 0.3);
-	color: #fff;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+const Layout = styled.div`
+	padding: 8px;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 `;
 
-export default function Select() {
-	return <SelectBox></SelectBox>;
+export default function Card({ children, ...props }) {
+	return (
+		<LGCard {...props}>
+			<Layout>{children}</Layout>
+		</LGCard>
+	);
 }

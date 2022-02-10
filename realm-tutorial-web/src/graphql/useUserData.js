@@ -3,8 +3,8 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 
 const GetUserData = gql`
-	query {
-		data(query: { _id: "shalev@gmail.com" }) {
+	query GetData($id: String!) {
+		data(query: { _id: $id }) {
 			_id
 			type
 			memberOf {
@@ -16,8 +16,12 @@ const GetUserData = gql`
 		}
 	}
 `;
-export default function useAllDocuments() {
-	const { data, loading, error, startPolling, stopPolling } = useQuery(GetUserData, {});
+export default function useAllDocuments(userId) {
+	const { data, loading, error, startPolling, stopPolling } = useQuery(GetUserData, {
+		variables: {
+			id: userId,
+		},
+	});
 	React.useEffect(() => {
 		// check server for updates every 1000ms
 		startPolling(1000);

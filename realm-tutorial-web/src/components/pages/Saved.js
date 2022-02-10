@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 
 function Saved() {
 	const app = useRealmApp();
-	const { documents, loading } = useUserData();
+	const { documents, loading } = useUserData(app?.currentUser?.profile?.email);
 	const [value, setValue] = useState(0);
 
 	return loading ? (
