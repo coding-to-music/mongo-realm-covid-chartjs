@@ -1,0 +1,24 @@
+{
+	"title": "stat",
+	"required": ["_id", "_partition", "name", "cases", "deaths", "recovered"],
+	"properties": {
+		"_id": {
+			"bsonType": "objectId"
+		},
+		"_partition": {
+			"bsonType": "string"
+		},
+		"name": {
+			"bsonType": "string"
+		},
+		"cases": {
+			"bsonType": "number"
+		},
+		"deaths": {
+			"bsonType": "number"
+		},
+		"recovered": {
+			"bsonType": "number"
+		}
+	}
+}
