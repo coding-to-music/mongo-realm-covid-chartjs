@@ -4,7 +4,6 @@ import SocialCard from '../DataCard';
 import Graph from '../Graph';
 import styled from '@emotion/styled';
 import CasesCake from '../CasesCake';
-import countryImg from './../../images/countryimg.jpg';
 import Loading from './../Loading';
 
 // Hook

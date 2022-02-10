@@ -187,6 +187,8 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	background-image: url(${background});
+	background-repeat: no-repeat;
+	background-size: cover;
 `;
 
 const LoginFormRow = styled.div`
