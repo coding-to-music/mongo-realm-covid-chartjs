@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ListGroup, Button, ListGroupItem } from 'react-bootstrap';
 import { useRealmApp } from '../RealmApp';
 import styled from '@emotion/styled';
-export default function DataCard({ headline, field1, field2, field3, field4, data1, data2, data3, data4, imgSrc, func }) {
+export default function DataCard({ headline, field1, field2, field3, field4, data1, data2, data3, data4, imgSrc, func, deleteId }) {
 	const app = useRealmApp();
 	const { addData, deleteStat } = app?.currentUser?.functions;
 	const [disp, setDisp] = useState('block');
@@ -58,12 +58,12 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 					<Button
 						onClick={async () => {
 							try {
-								let email = app?.currentUser?.profile?.email;
-								await deleteStat(email, headline, data1.toString(), data2.toString(), data3.toString());
-								setDisp('none');
+								console.log(deleteId);
+								await deleteStat(deleteId, headline, data1.toString(), data2.toString(), data3.toString());
 							} catch (error) {
 								console.log(error);
 							}
+							setDisp('none');
 						}}
 						variant="danger"
 					>

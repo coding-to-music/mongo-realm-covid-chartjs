@@ -11,7 +11,7 @@ function Admin() {
 	const app = useRealmApp();
 	const { document } = useDocument(app?.currentUser?.profile?.email);
 	const { documents, loading } = useAllDocuments();
-	const [value, setValue] = useState(0);
+	const [index, setIndex] = useState(0);
 
 	return loading ? (
 		<Container style={{ display: 'flex', height: '400px', justifyContent: 'center', alignItems: 'center' }}>
@@ -23,7 +23,7 @@ function Admin() {
 				className="form-select"
 				onChange={(e) => {
 					let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
-					setValue(index);
+					setIndex(index);
 				}}
 			>
 				{documents.map((c, i) => {
@@ -35,7 +35,7 @@ function Admin() {
 				})}
 			</Select>
 			<Row style={{ display: 'grid', gridTemplateColumns: '18rem 18rem 18rem ', gridGap: '10%', marginTop: '30px' }}>
-				{documents[value].memberOf.map((d, i) => {
+				{documents[index].memberOf.map((d, i) => {
 					return (
 						<Col key={i}>
 							<DataCard
@@ -48,6 +48,7 @@ function Admin() {
 								data2={d.deaths}
 								data3={d.recovered}
 								func="delete"
+								deleteId={documents[index]._id}
 							/>
 						</Col>
 					);
