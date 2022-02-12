@@ -34,10 +34,17 @@ function Admin() {
 					);
 				})}
 			</Select>
-			<Row style={{ display: 'grid', gridTemplateColumns: '18rem 18rem 18rem ', gridGap: '10%', marginTop: '30px' }}>
+			<Row
+				style={{
+					display: 'grid',
+					gridGap: '10%',
+					marginTop: '30px',
+					gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+				}}
+			>
 				{documents[index].memberOf.map((d, i) => {
 					return (
-						<Col key={i}>
+						<Col key={i} className="col-sm">
 							<DataCard
 								key={i}
 								headline={d._partition}

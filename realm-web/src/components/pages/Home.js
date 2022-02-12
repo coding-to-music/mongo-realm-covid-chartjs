@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { Container, Row, Col } from 'react-bootstrap';
 import SocialCard from '../DataCard';
 import { useAllFetch } from '../../hooks/useAllFetch';
+
 function Home() {
 	const { all, allError } = useAllFetch();
 
@@ -13,11 +14,11 @@ function Home() {
 			<Row>
 				<CoverImg />
 			</Row>
-			<Row>
+			<Row className="mt-5">
 				<Col style={{ color: 'white' }}>
 					<h1>Covid-Stats</h1>
 					<br />
-					<p>information about covid-19 stats in countries and continents around the world.</p>
+					<p>Information about covid-19 stats in continents and countries around the world.</p>
 					<p>data are updated every 10 minutes.</p>
 				</Col>
 				<Col className="mt-3 d-flex align-content-center justify-content-center">
