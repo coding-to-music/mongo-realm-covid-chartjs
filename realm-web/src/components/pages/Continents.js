@@ -24,7 +24,7 @@ function Continents() {
 	) : (
 		<Container fluid className="mx-auto" style={{ width: '65%' }}>
 			<Row className="justify-content-center ">
-				<Col md="auto">
+				<Col md="auto" className="d-flex justify-content-center ">
 					<Select
 						className="form-select"
 						aria-label="Default select example"
@@ -50,7 +50,7 @@ function Continents() {
 				</Col>
 			</Row>
 			<Row className="mt-3 justify-content-center ">
-				<Col>
+				<Col className="d-flex justify-content-center ">
 					<DataCard
 						headline={value === '' ? continents?.results[0]?.continent : value}
 						field1={'Total Cases'}
@@ -64,7 +64,7 @@ function Continents() {
 						func="save"
 					/>
 				</Col>
-				<Col>
+				<Col className="d-flex justify-content-center ">
 					<CasesCake
 						countryName={value === '' ? continents?.results[0]?.continent : value}
 						activeCases={activeCases === '' ? continents?.results[0]?.active : activeCases}

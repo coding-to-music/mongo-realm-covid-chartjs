@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './components/Navigation';
-
+import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Continents from './components/pages/Continents';
 import Home from './components/pages/Home';
@@ -21,6 +21,7 @@ export default function TaskApp() {
 					<Route path="/saved" element={<Saved />}></Route>
 					<Route path="/admin" element={<Admin />}></Route>
 				</Routes>
+				<Footer />
 			</Router>
 		</>
 	);

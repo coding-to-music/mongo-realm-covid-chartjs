@@ -17,7 +17,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 			}}
 			className="mb-2"
 		>
-			<Item style={{ backgroundColor: 'rgba(120, 120, 120, 0.2)', fontSize: '20px' }}>
+			<Item style={{ backgroundColor: 'rgba(50, 50, 50, 0.2)', fontSize: '20px' }}>
 				{headline} Covid Stats
 				<img src={imgSrc} style={{ marginLeft: '4px', width: '30px', hegith: '30px' }} />
 			</Item>
@@ -47,7 +47,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 								console.log(error);
 							}
 						}}
-						style={{ backgroundColor: 'rgba(75, 192, 192, 0.8)', borderColor: 'rgba(75, 192, 192, 1)', borderRadius: '10px' }}
+						style={{ backgroundColor: 'rgba(75, 192, 192, 0.8)', borderColor: 'rgba(75, 192, 192, 0.5)', borderRadius: '10px' }}
 					>
 						Save Data
 					</Button>{' '}

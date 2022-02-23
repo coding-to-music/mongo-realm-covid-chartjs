@@ -32,7 +32,7 @@ function Countries() {
 		<div>
 			<Container fluid className="mx-auto" style={{ width: '65%' }}>
 				<Row className="justify-content-center ">
-					<Col md="auto">
+					<Col md="auto" className="d-flex justify-content-center ">
 						<Select
 							className="form-select"
 							onChange={(e) => {
@@ -59,7 +59,7 @@ function Countries() {
 					</Col>
 				</Row>
 				<Row className="mt-3 d-flex align-content-center justify-content-center">
-					<Col>
+					<Col className="d-flex justify-content-center ">
 						<SocialCard
 							headline={value === '' ? countries?.results[0]?.country : value}
 							field1={'Total Cases'}
@@ -74,7 +74,7 @@ function Countries() {
 							func="save"
 						/>
 					</Col>
-					<Col>
+					<Col className="d-flex justify-content-center ">
 						<CasesCake
 							countryName={value === '' ? countries?.results[0]?.country : value}
 							activeCases={activeCases === '' ? countries?.results[0]?.active : activeCases}
@@ -82,7 +82,7 @@ function Countries() {
 						/>
 					</Col>
 				</Row>
-				<Row className="mt-4 d-flex align-content-center justify-content-center">
+				<Row className="mt-4 ">
 					{history?.results.length > 0 && (
 						<Graph
 							dates={dates === '' ? Object.keys(history?.results[0]?.timeline?.cases) : dates}

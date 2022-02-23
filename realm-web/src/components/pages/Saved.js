@@ -21,7 +21,7 @@ function Saved() {
 			<Row style={{ display: 'grid', gridTemplateColumns: '18rem 18rem 18rem ', gridGap: '10%', marginTop: '30px' }}>
 				{documents[value].memberOf.map((d, i) => {
 					return (
-						<Col key={i}>
+						<Col key={i} md="auto">
 							<DataCard
 								key={i}
 								headline={d._partition}
@@ -46,10 +46,3 @@ function Saved() {
 }
 
 export default Saved;
-
-const Select = styled.select`
-	margin: 40px;
-	background: rgba(0, 0, 0, 0.3);
-	color: #fff;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-`;

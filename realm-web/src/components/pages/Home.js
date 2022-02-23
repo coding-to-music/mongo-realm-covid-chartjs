@@ -15,7 +15,7 @@ function Home() {
 				<CoverImg />
 			</Row>
 			<Row className="mt-5">
-				<Col style={{ color: 'white' }}>
+				<Col style={{ color: 'white' }} className="mt-3 ">
 					<h1>Covid-Stats</h1>
 					<br />
 					<p>Information about covid-19 stats in continents and countries around the world.</p>
