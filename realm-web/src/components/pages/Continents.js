@@ -5,6 +5,7 @@ import DataCard from '../DataCard';
 import CasesCake from '../CasesCake';
 import Loading from './../Loading';
 import styled from '@emotion/styled';
+import worldImg from './../../images/world.jpg';
 
 function Continents() {
 	const { continents, continentsError, loading } = useContinentsFetch();
@@ -22,57 +23,61 @@ function Continents() {
 			<Loading />
 		</Container>
 	) : (
-		<Container fluid className="mx-auto" style={{ width: '65%' }}>
-			<Row className="justify-content-center ">
-				<Col md="auto" className="d-flex justify-content-center ">
-					<Select
-						className="form-select"
-						aria-label="Default select example"
-						onChange={(e) => {
-							let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
-							setValue(continents.results[index].continent);
-							setTodayCases(continents.results[index].todayCases);
-							setTotalCases(continents.results[index].cases);
-							setTotalDeaths(continents.results[index].deaths);
-							setTotalRecovered(continents.results[index].recovered);
-							setActiveCases(continents.results[index].recovered);
-							setPopulation(continents.results[index].population);
-						}}
-					>
-						{continents.results.map((c, i) => {
-							return (
-								<option data-key={i} key={i} value={c.continent}>
-									{c.continent}
-								</option>
-							);
-						})}
-					</Select>
-				</Col>
-			</Row>
-			<Row className="mt-3 justify-content-center ">
-				<Col className="d-flex justify-content-center ">
-					<DataCard
-						headline={value === '' ? continents?.results[0]?.continent : value}
-						field1={'Total Cases'}
-						field2={'Today Cases'}
-						field3={'Total Deaths'}
-						field4={'Total Recovered'}
-						data1={totalCases === '' ? continents?.results[0]?.cases : totalCases}
-						data4={todayCases === '' ? continents?.results[0]?.todayCases : todayCases}
-						data2={totalDeaths === '' ? continents?.results[0]?.deaths : totalDeaths}
-						data3={totalRecovered === '' ? continents?.results[0]?.recovered : totalRecovered}
-						func="save"
-					/>
-				</Col>
-				<Col className="d-flex justify-content-center ">
-					<CasesCake
-						countryName={value === '' ? continents?.results[0]?.continent : value}
-						activeCases={activeCases === '' ? continents?.results[0]?.active : activeCases}
-						population={population === '' ? continents?.results[0]?.population : population}
-					/>
-				</Col>
-			</Row>
-		</Container>
+		<>
+			<CoverImg />
+			<Container fluid className="mx-auto" style={{ width: '65%' }}>
+				<Row className="justify-content-center ">
+					<Col md="auto" className="d-flex justify-content-center " style={{ flexDirection: 'column' }}>
+						<Select
+							className="form-select"
+							name="continents"
+							aria-label="Default select example"
+							onChange={(e) => {
+								let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
+								setValue(continents.results[index].continent);
+								setTodayCases(continents.results[index].todayCases);
+								setTotalCases(continents.results[index].cases);
+								setTotalDeaths(continents.results[index].deaths);
+								setTotalRecovered(continents.results[index].recovered);
+								setActiveCases(continents.results[index].recovered);
+								setPopulation(continents.results[index].population);
+							}}
+						>
+							{continents.results.map((c, i) => {
+								return (
+									<option data-key={i} key={i} value={c.continent}>
+										{c.continent}
+									</option>
+								);
+							})}
+						</Select>
+					</Col>
+				</Row>
+				<Row className="mt-3 justify-content-center ">
+					<Col className="d-flex justify-content-center ">
+						<DataCard
+							headline={value === '' ? continents?.results[0]?.continent : value}
+							field1={'Total Cases'}
+							field2={'Today Cases'}
+							field3={'Total Deaths'}
+							field4={'Total Recovered'}
+							data1={totalCases === '' ? continents?.results[0]?.cases : totalCases}
+							data4={todayCases === '' ? continents?.results[0]?.todayCases : todayCases}
+							data2={totalDeaths === '' ? continents?.results[0]?.deaths : totalDeaths}
+							data3={totalRecovered === '' ? continents?.results[0]?.recovered : totalRecovered}
+							func="save"
+						/>
+					</Col>
+					<Col className="d-flex justify-content-center ">
+						<CasesCake
+							countryName={value === '' ? continents?.results[0]?.continent : value}
+							activeCases={activeCases === '' ? continents?.results[0]?.active : activeCases}
+							population={population === '' ? continents?.results[0]?.population : population}
+						/>
+					</Col>
+				</Row>
+			</Container>
+		</>
 	);
 }
 export default Continents;
@@ -82,4 +87,13 @@ const Select = styled.select`
 	background: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+`;
+
+const CoverImg = styled.section`
+	background-image: url(${worldImg});
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
 `;
