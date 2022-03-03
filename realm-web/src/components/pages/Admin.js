@@ -18,33 +18,30 @@ function Admin() {
 			<Loading />
 		</Container>
 	) : document?.type === 'admin' && documents.length > 0 ? (
-		<Container fluid className="mx-auto" style={{ width: '65%' }}>
-			<Select
-				className="form-select"
-				onChange={(e) => {
-					let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
-					setIndex(index);
-				}}
-			>
-				{documents.map((c, i) => {
-					return (
-						<option data-key={i} key={i} value={c._id}>
-							{c._id}
-						</option>
-					);
-				})}
-			</Select>
-			<Row
-				style={{
-					display: 'grid',
-					gridGap: '10%',
-					marginTop: '30px',
-					gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-				}}
-			>
+		<Container fluid className="mx-auto justify-content-center" style={{ width: '65%' }}>
+			<Row className=" d-flex justify-content-center ">
+				<Col md="auto" className="d-flex justify-content-center ">
+					<Select
+						className="form-select"
+						onChange={(e) => {
+							let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
+							setIndex(index);
+						}}
+					>
+						{documents.map((c, i) => {
+							return (
+								<option data-key={i} key={i} value={c._id}>
+									{c._id}
+								</option>
+							);
+						})}
+					</Select>
+				</Col>
+			</Row>
+			<Row className="d-flex justify-content-center " style={{ display: 'flex', flexWrap: 'wrap' }}>
 				{documents[index].memberOf.map((d, i) => {
 					return (
-						<Col key={i} className="col-sm">
+						<Col key={i} className="col-sm mt-4 d-flex align-items-center justify-content-center">
 							<DataCard
 								key={i}
 								headline={d._partition}

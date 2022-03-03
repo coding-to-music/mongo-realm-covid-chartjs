@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { useRealmApp } from '../../RealmApp';
 import { Container, Row, Col } from 'react-bootstrap';
 import useUserData from '../../graphql/useUserData';
-import useDocument from '../../graphql/useDocument';
 import Loading from './../Loading';
 import DataCard from '../DataCard';
-import styled from '@emotion/styled';
 
 function Saved() {
 	const app = useRealmApp();
@@ -18,10 +16,10 @@ function Saved() {
 		</Container>
 	) : documents.length > 0 ? (
 		<Container fluid className="mx-auto" style={{ width: '65%' }}>
-			<Row style={{ display: 'grid', gridTemplateColumns: '18rem 18rem 18rem ', gridGap: '10%', marginTop: '30px' }}>
+			<Row className="d-flex justify-content-center " style={{ display: 'flex', flexWrap: 'wrap' }}>
 				{documents[value].memberOf.map((d, i) => {
 					return (
-						<Col key={i} md="auto">
+						<Col key={i} className="col-sm mt-4 d-flex align-items-center justify-content-center">
 							<DataCard
 								key={i}
 								headline={d._partition}
