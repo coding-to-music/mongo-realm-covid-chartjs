@@ -47,30 +47,3 @@ function Graph({ dates, graphData }) {
 	);
 }
 export default Graph;
-var options = {
-	responsive: true,
-	maintainAspectRatio: false,
-	legend: {
-		fontColor: 'white',
-	},
-	scales: {
-		xAxes: [
-			{
-				ticks: {
-					fontColor: 'white',
-				},
-			},
-		],
-		yAxes: [
-			{
-				ticks: {
-					fontColor: 'white',
-					beginAtZero: true,
-					maxTicksLimit: 5,
-					stepSize: Math.ceil(250 / 5),
-					max: 250,
-				},
-			},
-		],
-	},
-};

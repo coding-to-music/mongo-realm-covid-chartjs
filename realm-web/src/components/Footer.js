@@ -57,7 +57,6 @@ export default Footer;
 
 const Box = styled.div`
 	padding: 40px 20px;
-	background: black;
 	position: realtive;
 	bottom: 0;
 	width: 100%;
@@ -93,7 +92,7 @@ const Row = styled.div`
 `;
 
 const FooterLink = styled.a`
-	color: #fff;
+	color: black;
 	margin-bottom: 20px;
 	font-size: 18px;
 	text-decoration: none;
@@ -106,7 +105,7 @@ const FooterLink = styled.a`
 
 const Heading = styled.p`
 	font-size: 24px;
-	color: #fff;
+	color: black;
 	margin-bottom: 40px;
 	font-weight: bold;
 `;

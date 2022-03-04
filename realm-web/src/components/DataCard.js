@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ListGroup, Button, ListGroupItem } from 'react-bootstrap';
+import { ListGroup, Button } from 'react-bootstrap';
 import { useRealmApp } from '../RealmApp';
 import styled from '@emotion/styled';
 export default function DataCard({ headline, field1, field2, field3, field4, data1, data2, data3, data4, imgSrc, func, deleteId }) {
@@ -19,7 +19,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 		>
 			<Item style={{ backgroundColor: 'rgba(50, 50, 50, 0.2)', fontSize: '20px' }}>
 				{headline} Covid Stats
-				<img src={imgSrc} style={{ marginLeft: '4px', width: '30px', hegith: '30px' }} />
+				<img alt="" src={imgSrc} style={{ marginLeft: '4px', width: '30px', hegith: '30px' }} />
 			</Item>
 			<Item>
 				{field1}: {data1}
@@ -35,7 +35,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 					{field4}: {data4}
 				</Item>
 			)}
-			{func == 'save' && (
+			{func === 'save' && (
 				<Item>
 					<Button
 						onClick={async () => {
@@ -53,7 +53,7 @@ export default function DataCard({ headline, field1, field2, field3, field4, dat
 					</Button>{' '}
 				</Item>
 			)}
-			{func == 'delete' && (
+			{func === 'delete' && (
 				<Item>
 					<Button
 						onClick={async () => {

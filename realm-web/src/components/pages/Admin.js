@@ -60,7 +60,7 @@ function Admin() {
 			</Row>
 		</Container>
 	) : (
-		<div>no permission :( </div>
+		<h1 style={{ color: 'white' }}>no permission :( </h1>
 	);
 }
 

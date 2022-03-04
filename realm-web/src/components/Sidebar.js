@@ -36,10 +36,3 @@ const UserDetailsContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 `;
-
-const Username = styled.div`
-	font-weight: bold;
-	text-align: center;
-	font-size: 15px;
-	color: white;
-`;

@@ -9,6 +9,7 @@ import Loading from './../Loading';
 // Hook
 import { useCountriesFetch } from '../../hooks/useCountriesFetch';
 import { useCountryHistory } from '../../hooks/useCountryHistory';
+import worldImg from './../../images/world.jpg';
 
 function Countries() {
 	const { countries, countriesError } = useCountriesFetch();
@@ -25,11 +26,12 @@ function Countries() {
 
 	if (countriesError || historyError) return <div>Something went wrong ...</div>;
 	return loading ? (
-		<Container style={{ display: 'flex', height: '400px', justifyContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
+		<Container style={{ display: 'flex', height: '400px', justifyContent: 'center', alignItems: 'center' }}>
 			<Loading />
 		</Container>
 	) : (
 		<div>
+			<CoverImg />
 			<Container fluid className="mx-auto" style={{ width: '65%' }}>
 				<Row className="justify-content-center ">
 					<Col md="auto" className="d-flex justify-content-center ">
@@ -59,7 +61,7 @@ function Countries() {
 					</Col>
 				</Row>
 				<Row className="mt-3 d-flex align-content-center justify-content-center">
-					<Col className="d-flex justify-content-center ">
+					<Col className="d-flex justify-content-center " sm={6}>
 						<SocialCard
 							headline={value === '' ? countries?.results[0]?.country : value}
 							field1={'Total Cases'}
@@ -74,7 +76,7 @@ function Countries() {
 							func="save"
 						/>
 					</Col>
-					<Col className="d-flex justify-content-center ">
+					<Col className="d-flex justify-content-center " sm={6}>
 						<CasesCake
 							countryName={value === '' ? countries?.results[0]?.country : value}
 							activeCases={activeCases === '' ? countries?.results[0]?.active : activeCases}
@@ -101,4 +103,12 @@ const Select = styled.select`
 	background: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+`;
+const CoverImg = styled.section`
+	background-image: url(${worldImg});
+	width: 100%;
+	height: 50vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
 `;

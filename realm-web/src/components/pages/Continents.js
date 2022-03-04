@@ -19,7 +19,7 @@ function Continents() {
 
 	if (continentsError) return <div>Something went wrong ...</div>;
 	return loading ? (
-		<Container style={{ display: 'flex', height: '400px', justifyContent: 'center', justifyContent: 'center', alignItems: 'center' }}>
+		<Container style={{ display: 'flex', height: '400px', justifyContent: 'center', alignItems: 'center' }}>
 			<Loading />
 		</Container>
 	) : (
@@ -27,7 +27,7 @@ function Continents() {
 			<CoverImg />
 			<Container fluid className="mx-auto" style={{ width: '65%' }}>
 				<Row className="justify-content-center ">
-					<Col md="auto" className="d-flex justify-content-center " style={{ flexDirection: 'column' }}>
+					<Col md="auto" className="d-flex justify-content-center ">
 						<Select
 							className="form-select"
 							name="continents"
@@ -54,7 +54,7 @@ function Continents() {
 					</Col>
 				</Row>
 				<Row className="mt-3 justify-content-center ">
-					<Col className="d-flex justify-content-center ">
+					<Col className="d-flex justify-content-center " sm={6}>
 						<DataCard
 							headline={value === '' ? continents?.results[0]?.continent : value}
 							field1={'Total Cases'}
@@ -68,7 +68,7 @@ function Continents() {
 							func="save"
 						/>
 					</Col>
-					<Col className="d-flex justify-content-center ">
+					<Col className="d-flex justify-content-center " sm={6}>
 						<CasesCake
 							countryName={value === '' ? continents?.results[0]?.continent : value}
 							activeCases={activeCases === '' ? continents?.results[0]?.active : activeCases}
