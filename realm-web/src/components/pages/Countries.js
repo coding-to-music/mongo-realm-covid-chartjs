@@ -60,8 +60,8 @@ function Countries() {
 						</Select>
 					</Col>
 				</Row>
-				<Row className="mt-3 d-flex align-content-center justify-content-center">
-					<Col className="d-flex justify-content-center " sm={6}>
+				<Row className="mt-1 d-flex align-content-center justify-content-center">
+					<Col className="d-flex justify-content-center mt-4" sm={6}>
 						<SocialCard
 							headline={value === '' ? countries?.results[0]?.country : value}
 							field1={'Total Cases'}
@@ -69,14 +69,14 @@ function Countries() {
 							field3={'Total Deaths'}
 							field4={'Total Recovered'}
 							data1={totalCases === '' ? countries?.results[0]?.cases : totalCases}
-							data4={activeCases === '' ? countries?.results[0]?.active : activeCases}
-							data2={totalDeaths === '' ? countries?.results[0]?.deaths : totalDeaths}
-							data3={totalRecovered === '' ? countries?.results[0]?.recovered : totalRecovered}
+							data2={activeCases === '' ? countries?.results[0]?.active : activeCases}
+							data3={totalDeaths === '' ? countries?.results[0]?.deaths : totalDeaths}
+							data4={totalRecovered === '' ? countries?.results[0]?.recovered : totalRecovered}
 							imgSrc={imgSrc === '' ? countries?.results[0]?.countryInfo?.flag : imgSrc}
 							func="save"
 						/>
 					</Col>
-					<Col className="d-flex justify-content-center " sm={6}>
+					<Col className="d-flex justify-content-center mt-4" sm={6}>
 						<CasesCake
 							countryName={value === '' ? countries?.results[0]?.country : value}
 							activeCases={activeCases === '' ? countries?.results[0]?.active : activeCases}

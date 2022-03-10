@@ -53,8 +53,8 @@ function Continents() {
 						</Select>
 					</Col>
 				</Row>
-				<Row className="mt-3 justify-content-center ">
-					<Col className="d-flex justify-content-center " sm={6}>
+				<Row className="mt-1 justify-content-center ">
+					<Col className="d-flex justify-content-center mt-4 " sm={6}>
 						<DataCard
 							headline={value === '' ? continents?.results[0]?.continent : value}
 							field1={'Total Cases'}
@@ -68,7 +68,7 @@ function Continents() {
 							func="save"
 						/>
 					</Col>
-					<Col className="d-flex justify-content-center " sm={6}>
+					<Col className="d-flex justify-content-center mt-4 " sm={6}>
 						<CasesCake
 							countryName={value === '' ? continents?.results[0]?.continent : value}
 							activeCases={activeCases === '' ? continents?.results[0]?.active : activeCases}

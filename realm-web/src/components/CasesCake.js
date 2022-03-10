@@ -5,7 +5,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function CasesCake({ countryName, activeCases, population }) {
 	const data = {
-		labels: ['Verified for Covid:' + activeCases],
+		labels: ['Verified', 'rest'],
 		datasets: [
 			{
 				label: 'Cases of Covid in',

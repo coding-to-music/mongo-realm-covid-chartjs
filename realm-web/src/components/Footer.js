@@ -20,7 +20,7 @@ const Footer = () => {
 					</Column>
 					<Column>
 						<Heading>Contact Us</Heading>
-						<FooterLink href="#">Isreal</FooterLink>
+						<FooterLink href="#">Israel</FooterLink>
 						<FooterLink href="#">USA</FooterLink>
 						<FooterLink href="#">Spain</FooterLink>
 						<FooterLink href="#">Germany</FooterLink>
@@ -61,6 +61,7 @@ const Box = styled.div`
 	bottom: 0;
 	width: 100%;
 	margin-top: 200px;
+	background-color: rgb(65, 65, 65);
 	@media (max-width: 1000px) {
 		padding: 70px 30px;
 	}

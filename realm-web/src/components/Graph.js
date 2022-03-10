@@ -20,7 +20,9 @@ function Graph({ dates, graphData }) {
 	return (
 		<Line
 			data={data}
+			style={{ width: '100%' }}
 			options={{
+				responsive: true,
 				legend: {
 					fontColor: 'white',
 				},

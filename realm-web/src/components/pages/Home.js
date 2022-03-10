@@ -18,10 +18,9 @@ function Home() {
 					<Col style={{ color: 'white' }} className=" mt-3 " sm={6}>
 						<h1>Covid-Stats</h1>
 						<br />
-						<p>Information about covid-19 stats in continents and countries</p>
-						<p>around the world.</p>
-						<br />
-						<p>data are updated every 10 minutes.</p>
+						<p>Information about covid-19 stats in continents and countries around the world.</p>
+						<p>data are updated every 10 minutes by "NovelCOVID API".</p>
+						<p>You can Serach for covid data around the world and saved it.</p>
 					</Col>
 					<Col className="mt-3 d-flex align-content-center justify-content-center" sm={6}>
 						<SocialCard
