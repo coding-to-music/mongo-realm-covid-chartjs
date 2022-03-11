@@ -6,7 +6,7 @@ import useDocument from '../../graphql/useDocument';
 import Loading from './../Loading';
 import DataCard from '../DataCard';
 import styled from '@emotion/styled';
-
+import './../Container.css';
 function Admin() {
 	const app = useRealmApp();
 	const { document } = useDocument(app?.currentUser?.profile?.email);
@@ -18,7 +18,7 @@ function Admin() {
 			<Loading />
 		</Container>
 	) : document?.type === 'admin' && documents.length > 0 ? (
-		<Container fluid className="mx-auto justify-content-center" style={{ width: '65%' }}>
+		<Container className="mx-auto justify-content-center">
 			<Row className=" d-flex justify-content-center ">
 				<Col md="auto" className="d-flex justify-content-center ">
 					<Select

@@ -6,6 +6,7 @@ import CasesCake from '../CasesCake';
 import Loading from './../Loading';
 import styled from '@emotion/styled';
 import worldImg from './../../images/world.jpg';
+import './../Container.css';
 
 function Continents() {
 	const { continents, continentsError, loading } = useContinentsFetch();
@@ -25,7 +26,7 @@ function Continents() {
 	) : (
 		<>
 			<CoverImg />
-			<Container fluid className="mx-auto" style={{ width: '65%' }}>
+			<Container className="mx-auto">
 				<Row className="justify-content-center ">
 					<Col md="auto" className="d-flex justify-content-center ">
 						<Select

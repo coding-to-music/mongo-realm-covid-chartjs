@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import useUserData from '../../graphql/useUserData';
 import Loading from './../Loading';
 import DataCard from '../DataCard';
-
+import './../Container.css';
 function Saved() {
 	const app = useRealmApp();
 	const { documents, loading } = useUserData(app?.currentUser?.profile?.email);
@@ -15,7 +15,7 @@ function Saved() {
 			<Loading />
 		</Container>
 	) : documents.length > 0 ? (
-		<Container fluid className="mx-auto" style={{ width: '65%' }}>
+		<Container className="mx-auto">
 			<Row className="d-flex justify-content-center " style={{ display: 'flex', flexWrap: 'wrap' }}>
 				{documents[value].memberOf.map((d, i) => {
 					return (

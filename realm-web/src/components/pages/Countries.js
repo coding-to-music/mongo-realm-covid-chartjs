@@ -5,6 +5,7 @@ import Graph from '../Graph';
 import styled from '@emotion/styled';
 import CasesCake from '../CasesCake';
 import Loading from './../Loading';
+import './../Container.css';
 
 // Hook
 import { useCountriesFetch } from '../../hooks/useCountriesFetch';
@@ -32,7 +33,7 @@ function Countries() {
 	) : (
 		<div>
 			<CoverImg />
-			<Container fluid className="mx-auto" style={{ width: '65%' }}>
+			<Container className="mx-auto">
 				<Row className="justify-content-center ">
 					<Col md="auto" className="d-flex justify-content-center ">
 						<Select
