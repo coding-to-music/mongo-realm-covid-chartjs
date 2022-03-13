@@ -40,14 +40,16 @@ function Countries() {
 							className="form-select"
 							onChange={(e) => {
 								let index = e.target.options[e.target.options.selectedIndex].getAttribute('data-key');
+								let name = e.target.options[e.target.options.selectedIndex].getAttribute('value');
+								let countryData = history.results.find((o) => o.country === name);
 								setValue(countries.results[index].country);
 								setActiveCases(countries.results[index].active);
 								setPopulation(countries.results[index].population);
 								setTotalCases(countries.results[index].cases);
 								setTotalDeaths(countries.results[index].deaths);
 								setTotalRecovered(countries.results[index].recovered);
-								setDates(Object.keys(history.results[index].timeline.cases));
-								setGraphData(Object.values(history.results[index].timeline.cases));
+								setDates(Object.keys(countryData.timeline.cases));
+								setGraphData(Object.values(countryData.timeline.cases));
 								setImgSrc(countries.results[index].countryInfo.flag);
 							}}
 						>
