@@ -3,7 +3,7 @@ import LoginScreen from './components/LoginScreen';
 import TaskApp from './TaskApp';
 import RealmApolloProvider from './graphql/RealmApolloProvider';
 import { useRealmApp, RealmAppProvider } from './RealmApp';
-export const mongo-realm-covid-chartjs-ryfil = 'ex3-ejuun';
+export const APP_ID = 'mongo-realm-covid-chartjs-ryfil';
 // export const APP_ID = 'ex3-ejuun';
 
 const RequireLoggedInUser = ({ children }) => {
