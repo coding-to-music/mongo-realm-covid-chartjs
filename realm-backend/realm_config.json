@@ -1,7 +1,8 @@
 {
     "config_version": 20210101,
-    "app_id": "ex3-ejuun",
-    "name": "EX3",
+    "app_id": "mongo-realm-covid-chartjs-ryfil",
+    "name": "mongo-realm-covid-chartjs",
     "location": "US-VA",
-    "deployment_model": "GLOBAL"
+    "deployment_model": "GLOBAL",
+    "environment": "production"
 }
