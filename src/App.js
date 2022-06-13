@@ -3,7 +3,8 @@ import LoginScreen from './components/LoginScreen';
 import TaskApp from './TaskApp';
 import RealmApolloProvider from './graphql/RealmApolloProvider';
 import { useRealmApp, RealmAppProvider } from './RealmApp';
-export const APP_ID = 'ex3-ejuun';
+export const mongo-realm-covid-chartjs-ryfil = 'ex3-ejuun';
+// export const APP_ID = 'ex3-ejuun';
 
 const RequireLoggedInUser = ({ children }) => {
 	// Only render children if there is a logged in user.
