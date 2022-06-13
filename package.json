@@ -36,7 +36,8 @@
 		"format": "prettier --write \"**/*.js\"",	
 		"vercel": "npm run deploy && vercel --prod",
 		"mongohost": "npm run deploy && npm run build && cp -a ./build/ ./hosting/files && realm-cli push --remote=tasktracker-bmumi --include-hosting",
-		"deploy": "git add . && git commit -m Build && git push"	
+		"deploy": "git add . && git commit -m Build && git push",	
+		"deploy:backend": "npm run deploy && realm-cli push"	
 	},
 	"eslintConfig": {
 		"extends": "react-app"
