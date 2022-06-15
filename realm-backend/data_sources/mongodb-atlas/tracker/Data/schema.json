@@ -5,7 +5,8 @@
       "bsonType": "string"
     },
     "_partition": {
-      "bsonType": "string"
+      "bsonType": "string",
+      "required": "true"
     },
     "type": {
       "bsonType": "string"
