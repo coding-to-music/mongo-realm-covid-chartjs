@@ -13,7 +13,8 @@ function Navigation() {
 
   const [currentProject, setCurrentProject] = React.useState(
     // set the current project as  "My Project"
-    app.currentUser.customData.memberOf[0]
+    app?.currentUser?.profile?.email
+    // app.currentUser.customData.memberOf[0]
   );
   return (
     <Navbar bg="dark" expand="lg" variant="dark" sticky="top">
