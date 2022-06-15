@@ -51,7 +51,7 @@ function Home() {
               width="100%"
               controls
               url="www.youtu.be/w5HvxsOo00E"
-              origin={REACT_APP_ORIGIN_URL}
+              origin="https://mongo-realm-covid-chartjs.vercel.app"
               host="https://www.youtube.com"
             />
           </Col>
