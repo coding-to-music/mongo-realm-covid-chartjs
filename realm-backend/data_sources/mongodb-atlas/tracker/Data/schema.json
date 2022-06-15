@@ -1,7 +1,10 @@
 {
-  "title": "Datum",
+  "bsonType": "object",
   "properties": {
     "_id": {
+      "bsonType": "string"
+    },
+    "_partition": {
       "bsonType": "string"
     },
     "type": {
@@ -27,5 +30,7 @@
         }
       }
     }
-  }
+  },
+  "required": ["_id", "_partition", "type"],
+  "title": "Datum"
 }
