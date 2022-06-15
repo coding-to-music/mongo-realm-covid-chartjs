@@ -1,64 +1,65 @@
 {
-	"name": "mongo-realm-covid-chartjs",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@apollo/client": "^3.1.4",
-		"@emotion/react": "^11.7.1",
-		"@emotion/styled": "^11.6.0",
-		"@leafygreen-ui/card": "^4.1.0",
-		"@leafygreen-ui/leafygreen-provider": "^1.1.4",
-		"@leafygreen-ui/palette": "^2.0.2",
-		"@leafygreen-ui/text-input": "^3.0.4",
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.3.2",
-		"bootstrap": "^5.1.3",
-		"chart.js": "^3.7.0",
-		"eslint-config-react-app": "^7.0.0",
-		"graphql": "^15.3.0",
-		"graphql-tag": "^2.11.0",
-		"react": "^16.14.0",
-		"react-bootstrap": "^2.1.1",
-		"react-chartjs-2": "^4.0.1",
-		"react-dom": "^16.13.1",
-		"react-player": "^2.9.0",
-		"react-router-bootstrap": "^0.26.0",
-		"react-router-dom": "^6.2.1",
-		"react-scripts": "3.4.3",
-		"react-spinners": "^0.9.0",
-		"realm-web": "^1.5.1",
-		"validator": "^13.7.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"format": "prettier --write \"**/*.js\"",	
-		"vercel": "npm run deploy && vercel --prod",
-		"mongohost": "npm run deploy && npm run build && cp -a ./build/ ./hosting/files && realm-cli push --remote=tasktracker-bmumi --include-hosting",
-		"deploy": "git add . && git commit -m Build && git push",	
-		"deploy:backend": "npm run deploy && cd ./realm-backend && realm-cli push"	
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"eslint": "^6.6.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"eslint-plugin-react": "^7.27.1",
-		"prettier": "^2.5.0"
-	}
+  "name": "mongo-realm-covid-chartjs",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.1.4",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@leafygreen-ui/card": "^4.1.0",
+    "@leafygreen-ui/leafygreen-provider": "^1.1.4",
+    "@leafygreen-ui/palette": "^2.0.2",
+    "@leafygreen-ui/text-input": "^3.0.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "bootstrap": "^5.1.3",
+    "chart.js": "^3.7.0",
+    "eslint-config-react-app": "^7.0.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^2.1.1",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^16.13.1",
+    "react-player": "^2.9.0",
+    "react-router-bootstrap": "^0.26.0",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "3.4.3",
+    "react-spinners": "^0.9.0",
+    "realm-web": "^1.5.1",
+    "validator": "^13.7.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "format": "prettier --write \"**/*.js\"",
+    "vercel": "npm run deploy && vercel --prod",
+    "mongohost": "npm run deploy && npm run build && cp -a ./build/ ./hosting/files && realm-cli push --remote=tasktracker-bmumi --include-hosting",
+    "deploy": "git add . && git commit -m Build && git push",
+    "realm:init": "npm run deploy && cd ./realm-backend && realm-cli app init",
+    "deploy:backend": "npm run deploy && cd ./realm-backend && realm-cli push"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "prettier": "^2.5.0"
+  }
 }
