@@ -2,9 +2,13 @@ exports = async function (partitionValue) {
   const cluster = context.services.get("mongodb-atlas");
   const userCollection = cluster.db("tracker").collection("User");
 
+  console.log("userCollection BEGIN");
   console.log(userCollection);
+  console.log("userCollection END");
 
+  console.log("context.user.id BEGIN");
   console.log(context.user.id);
+  console.log("context.user.id END");
 
   try {
     const user = await userCollection.findOne({ _id: context.user.id });
