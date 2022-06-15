@@ -15,7 +15,7 @@ https://github.com/mongodb-university/realm-tutorial-web
 ## Environment variables:
 
 ```java
-
+.
 ```
 
 ## GitHub
@@ -49,9 +49,11 @@ submit a pull request -- thanks! -- please feel free to do so at
 https://github.com/mongodb/docs-realm/ (see the tutorial/ subdirectory).
 
 ## -----------run the project---------------
+
 navigate in the terminal to "realm-web" directory.
 
-install modules with command:  		npm install
+install modules with command: npm install
 
-run the project with command:  		run npm start
+run the project with command: run npm start
+
 ## --------------------------------------------
