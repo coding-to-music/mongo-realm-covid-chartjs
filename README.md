@@ -15,7 +15,7 @@ https://github.com/mongodb-university/realm-tutorial-web
 ## Environment variables:
 
 ```java
-.
+
 ```
 
 ## GitHub
