@@ -1,35 +1,22 @@
 {
-  "title": "Datum",
+  "bsonType": "object",
   "properties": {
     "_id": {
-      "bsonType": "string"
+      "bsonType": "objectId"
     },
     "_partition": {
-      "bsonType": "string",
-      "required": true
-    },
-    "type": {
       "bsonType": "string"
     },
-    "memberOf": {
-      "bsonType": "array",
-      "items": {
-        "bsonType": "object",
-        "properties": {
-          "_partition": {
-            "bsonType": "string"
-          },
-          "cases": {
-            "bsonType": "string"
-          },
-          "deaths": {
-            "bsonType": "string"
-          },
-          "recovered": {
-            "bsonType": "string"
-          }
-        }
-      }
+    "name": {
+      "bsonType": "string"
+    },
+    "owner": {
+      "bsonType": "string"
+    },
+    "status": {
+      "bsonType": "string"
     }
-  }
+  },
+  "required": ["_id", "_partition", "name", "status"],
+  "title": "Task"
 }
