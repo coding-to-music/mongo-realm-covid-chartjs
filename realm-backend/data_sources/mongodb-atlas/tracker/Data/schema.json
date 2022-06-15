@@ -10,7 +10,6 @@
     "type": {
       "bsonType": "string"
     },
-    "required": ["_id", "_partition"],
     "memberOf": {
       "bsonType": "array",
       "items": {
