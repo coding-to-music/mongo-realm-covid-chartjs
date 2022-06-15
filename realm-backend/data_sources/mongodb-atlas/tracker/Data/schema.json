@@ -5,12 +5,12 @@
       "bsonType": "string"
     },
     "_partition": {
-      "bsonType": "string",
-      "required": "true"
+      "bsonType": "string"
     },
     "type": {
       "bsonType": "string"
     },
+    "required": ["_id", "_partition"],
     "memberOf": {
       "bsonType": "array",
       "items": {
