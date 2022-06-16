@@ -1,5 +1,4 @@
 {
-    "bsonType": "object",
     "properties": {
         "_id": {
             "bsonType": "string"
@@ -12,29 +11,24 @@
             "items": {
                 "bsonType": "object",
                 "properties": {
-                    "_partition": {
+                    "name": {
                         "bsonType": "string"
                     },
-                    "cases": {
-                        "bsonType": "string"
-                    },
-                    "deaths": {
-                        "bsonType": "string"
-                    },
-                    "recovered": {
+                    "partition": {
                         "bsonType": "string"
                     }
-                }
+                },
+                "title": "Project"
             }
         },
-        "type": {
+        "name": {
             "bsonType": "string"
         }
     },
     "required": [
         "_id",
         "_partition",
-        "type"
+        "name"
     ],
-    "title": "Datum"
+    "title": "User"
 }

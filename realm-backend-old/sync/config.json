@@ -1,10 +1,6 @@
 {
-    "type": "partition",
     "state": "enabled",
-    "development_mode_enabled": false,
-    "service_name": "mongodb-atlas",
     "database_name": "tracker",
-    "is_recovery_mode_disabled": false,
     "partition": {
         "key": "_partition",
         "type": "string",
@@ -31,5 +27,7 @@
                 }
             }
         }
-    }
+    },
+    "development_mode_enabled": false,
+    "service_name": "mongodb-atlas"
 }

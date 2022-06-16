@@ -1,17 +1,9 @@
 {
-    "collection": "Data",
+    "collection": "User",
     "database": "tracker",
     "roles": [
         {
             "name": "default",
-            "apply_when": {},
-            "insert": true,
-            "delete": true,
-            "search": true,
-            "additional_fields": {}
-        },
-        {
-            "name": "another-role",
             "apply_when": {},
             "insert": true,
             "delete": true,
