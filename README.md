@@ -26,6 +26,7 @@ Error: Request failed (POST https://stitch.mongodb.com/api/client/v2.0/app/mongo
     at Generator.next (index.js:118:21)
     at n (asyncToGenerator.js:3:20)
     at s (asyncToGenerator.js:25:9)
+
 ```
 
 ## Environment variables:
