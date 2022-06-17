@@ -21,8 +21,7 @@ export default function useAllDocuments(userId) {
     GetUserData,
     {
       variables: {
-        id: email,
-        // id: userId,
+        id: userId,
       },
     }
   );
