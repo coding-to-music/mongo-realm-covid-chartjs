@@ -19,14 +19,6 @@ https://www.youtube.co
 
 www-widgetapi.js:982 Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://mongo-realm-covid-chartjs.vercel.app').
 
-Error: Request failed (POST https://stitch.mongodb.com/api/client/v2.0/app/mongo-realm-covid-chartjs-ryfil/functions/call): insert not permitted (status 403)
-    at Button.js:2850:24
-    at l (index.js:63:40)
-    at Generator._invoke (index.js:293:22)
-    at Generator.next (index.js:118:21)
-    at n (asyncToGenerator.js:3:20)
-    at s (asyncToGenerator.js:25:9)
-
 ```
 
 ## Environment variables:
