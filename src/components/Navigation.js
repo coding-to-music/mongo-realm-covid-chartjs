@@ -17,8 +17,8 @@ function Navigation() {
 
   const [currentProject, setCurrentProject] = React.useState(
     // set the current project as  "My Project"
-    // app?.currentUser?.profile?.email
-    app?.currentUser?.profile?.id
+    app?.currentUser?.profile?.email
+    // app?.currentUser?.profile?.id
     // app.currentUser.customData.memberOf[0]
   );
   return (
