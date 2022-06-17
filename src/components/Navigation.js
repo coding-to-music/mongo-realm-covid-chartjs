@@ -10,6 +10,9 @@ function Navigation() {
   const app = useRealmApp();
 
   console.log(app);
+  console.log(app.currentUser);
+  console.log(app.currentUser.customData);
+  console.log(app?.currentUser?.profile);
 
   const [currentProject, setCurrentProject] = React.useState(
     // set the current project as  "My Project"
