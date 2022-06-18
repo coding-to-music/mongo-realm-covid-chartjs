@@ -24,7 +24,8 @@ function Admin() {
     >
       <Loading />
     </Container>
-  ) : document?.type === "admin" && documents.length > 0 ? (
+  ) : 1 > 0 ? (
+    // ) : document?.type === "admin" && documents.length > 0 ? (
     <Container className="mx-auto justify-content-center">
       <Row className=" d-flex justify-content-center ">
         <Col md="auto" className="d-flex justify-content-center ">
